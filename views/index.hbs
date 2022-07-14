@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJEKT MAIN</title>
+    <link rel="stylesheet" type="text/css" href="../assets/style.css">
+    <link rel="shortcut icon" href="./assets/fala2.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/e438dd6e14.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+</head>
+
+<body onload="getWeatherDataM()">
+<!-- nawigacja -->
+<div class="sticky">
+    <div><i class="ship1 fa-solid fa-sailboat"></i><i class="ship2 fa-solid fa-skull-crossbones"></i></div>
+    <div class="topnav" id="myTopnav">
+        <a href="#" class="active">MM<i class="fa-solid fa-wind"></i></a>
+        <a href="#" onclick="document.getElementById('registerForm').style.display='block'" style="width:auto">Zarejestruj się</a>
+        <a href="#" onclick="document.getElementById('loginForm').style.display='block'">Zaloguj się</a>
+        <a href="javascript:void(0);" class="icon" onclick="responsiveNavFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+</div>
+
+
+<!-- Wybór kierunku -->
+<h3>Dokąd płyniemy?</h3>
+
+<div class="row">
+
+    <div class="column">
+        <div class="card">
+            <img src="./../assets/img/lofoty1.jpg" alt="Lofoty" style="width:100%; height: 200px;">
+            <div class="container">
+                <h2 class="title">Lofoty</h2>
+                <p class="title">Dla zdobywców</p>
+                <p class="justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, qui? Quo, perferendis itaque. Repellendus beatae pariatur commodi illum ullam aspernatur fugit officiis totam, nam fuga iure et, expedita quae. Sunt?</p>
+                <p>Sprawdź oferty naszych rejsów</p>
+                <p><button class="button"><a href="./reservationL">Zarezerwuj</a></button></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="./../assets/img/kanary1.jpg" alt="Kanary" style="width:100%; height: 200px;">
+            <div class="container">
+                <h2>Kanary</h2>
+                <p class="title">Powiew oceanu</p>
+                <p class="justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, qui? Quo, perferendis itaque. Repellendus beatae pariatur commodi illum ullam aspernatur fugit officiis totam, nam fuga iure et, expedita quae. Sunt?</p>
+                <p>Sprawdź oferty naszych rejsów</p>
+                <p><button class="button"><a href="./reservationK">Zarezerwuj</a></button></p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="column">
+        <div class="card">
+            <img src="./../assets/img/mazury1.jpg" alt="Mazury" style="width:100%; height: 200px;">
+            <div class="container">
+                <h2>Mazury</h2>
+                <p class="title">Szuwarowo bagiennie</p>
+                <p class="justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, qui? Quo, perferendis itaque. Repellendus beatae pariatur commodi illum ullam aspernatur fugit officiis totam, nam fuga iure et, expedita quae. Sunt?</p>
+                <p>Sprawdź oferty naszych rejsów</p>
+                <p><button class="button"><a href="./reservationM">Zarezerwuj</a></button></p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ukryty formularz rejestracji -->
+    <div id="registerForm" class="modal">
+        <form class="modalAnimation" action="" method="">
+            <div class="closeContainer">
+                <span onclick="document.getElementById('registerForm').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+            <div class="containerForm">
+                <label for="userLogin"><b>Login:</b></label><br>
+                <input type="text" name="userLogin" id="userLogin" placeholder="Wymyśl login" required><br><br>
+                <label for="userEmail"><b>Email:</b></label><br>
+                <input type="email" name="userEmail" id="userEmail" placeholder="Podaj email" required><br><br>
+                <label for="userPassword"><b>Password:</b></label><br>
+                <input type="password" name="userRegisterPassword" id="userRegisterPassword" placeholder="Podaj password" required><br>
+                <input type="checkbox" onclick="toggleRegisterPassword()">Pokaż hasło<br><br>
+                <input type="checkbox" name="userConsent" required>Zgadzam się na wszystko!<br><br>
+                <button class="formButton" type="submit" onclick="document.getElementById('loginForm').style.display='block', closeRegister()">Zarejestruj się</button>
+            </div>
+        </form>
+    </div> 
+
+
+<!-- ukryty formularz logowania -->
+    <div id="loginForm" class="modal">
+        <form class="modalAnimation" action="" method="">
+            <div class="closeContainer">
+                <span onclick="document.getElementById('loginForm').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+            <div class="containerForm">
+                <label for="userLogin"><b>Login:</b></label><br>
+                <input type="text" name="userLogin" placeholder="Podaj login" required><br><br>
+                <label for="userLoginPassword"><b>Password:</b></label><br>
+                <input type="password" name="userLoginPassword" id="userLoginPassword" placeholder="Podaj password" required><br>
+                <input type="checkbox" onclick="toggleLoginPassword()">Pokaż hasło<br><br>
+                <a href="" onclick="alert('Przykro nam my też niestety nie - programista dopiero się uczy')">Nie pamiętasz hasła?</a><br><br>
+                <button class="formButton" type="submit" onclick="alert('Witamy')">Zaloguj</button>
+                <button class="formButton" type="submit"><a href="#" onclick="document.getElementById('registerForm').style.display='block', closeLogin()" style="width:auto">Lub zarejestruj się</a></button>
+                
+            </div>
+        </form>
+    </div>   
+
+
+{{!-- WEATHER --}}
+
+
+    <div class="containerWeatherApp">
+            
+        <div class="currentInfo">
+            
+            <div class="dateContainer">
+                <div class="time" id="time"><span id="amPM"></span></div>
+                <div class="date" id="date"></div>
+                <div class="others" id="currentWeatherItems"></div>
+                
+            </div>
+
+            <div class="placeContainer">
+                <div class="timeZone" id="timeZone"></div>
+                <div class="country" id="country"></div>
+                <div class="today" id="currentTemp"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{{!-- KONIEC WEATHER --}}
+
+
+<!-- footer -->
+
+    <footer>
+        <div class="footer">
+            <a href="#"><i class="fa fa-arrow-up"></i></a><br><br>
+            <i class="fa fa-facebook-official"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-pinterest-p"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-linkedin"></i>
+            <p class="smallFont">&#169; MMatysek</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="./../js/func.js"></script>
+</body>
+</html>

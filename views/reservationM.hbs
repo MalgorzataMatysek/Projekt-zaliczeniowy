@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJEKT Reservation</title>
+    <link rel="stylesheet" type="text/css" href="../assets/style.css">
+    <link rel="shortcut icon" href="./assets/fala2.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/e438dd6e14.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+</head>
+
+<body onload="getNOK(), getEUR(), getWeatherDataM(), getPriceM()">
+
+    <!-- nawigacja -->
+<div class="sticky">
+    <div><i class="ship1 fa-solid fa-sailboat"></i><i class="ship2 fa-solid fa-skull-crossbones"></i></div>
+    <div class="topnav" id="myTopnav">
+        <a href="./" class="active">MM<i class="fa-solid fa-wind"></i></a>
+        {{!-- <a href="#" onclick="document.getElementById('registerForm').style.display='block'" style="width:auto">Zarejestruj się</a>
+        <a href="#" onclick="document.getElementById('loginForm').style.display='block'">Zaloguj się</a> --}}
+        <a href="#" onclick="history.back()"><i class="fa fa-arrow-left"></i></a>
+        <a href="javascript:void(0);" class="icon" onclick="responsiveNavFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+</div>
+
+
+
+
+<br>
+
+NBP: <span>średni kurs NOK<img src="./../assets/img/norwayFlag.png" alt="flaga" style="width:20px"></span><span id="insertNOK"></span>
+<span>średni kurs EUR<img src="./../assets/img/euFlag.png" alt="flaga" style="width:20px"></span><span id="insertEUR"></span>
+
+
+
+
+
+
+{{!-- WYBOR KAJUT i REZERWACJA --}}
+
+<div class="row">
+
+    <div class="column2">
+        <div class="card2">
+            <div class="container2">
+                <img src="./../assets/img/formalnosc.avif" alt="papierologia" class="formalnosc">
+                <h3 class="title2">Formularz</h3>
+                <p>Wybierz i kliknij</p>
+                <form action="" autocomplete="on">
+                    <input class="resFormInput" type="week" id="data" name="data" min="2022-W30" max="2022-W45" required><br>
+                    <div class="resFormInput"><span id="priceM"></span> PLN koja/doba</div>
+                    <input class="resFormInput" min="1" max="8" type="number" name="berthNumber" size="10" id="berthNumber" placeholder="ile osób jedzie?" required><br>
+                    <label class="gratis" for="cars">Wybierz gratis:</label>
+                    <input type="radio" id="cars" name="cars">Kubek 
+                    <input type="radio" id="cars" name="cars">Czapeczka<br>
+                    <textarea id="uwagi" class="resFormInput" name="message" rows="2" style="width: 50%;" placeholder="Specjalne życzenia?"></textarea><br><br>                        
+                    <button type="submit" class="buttonRes" onclick="alert('Dziekujemy')"><a href="#">Zarezerwuj</a></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="column2">
+        <div class="card2">
+            <div class="yachtBerthContainerM">
+                <div class="yachtBerth1M">
+                    <button onclick="classList.toggle('selected')"><i class="fa-solid fa-bed"></i></button><br><br>
+                    <button onclick="classList.toggle('selected')"><i class="fa-solid fa-bed"></i></button>
+                </div>
+                <div class="yachtBerth2M">
+                    <button class="not"><i class="fa-solid fa-bed"></i></button><br><br>
+                    <button class="not"><i class="fa-solid fa-bed"></i></button>
+                </div>
+                <div class="yachtBerth3M">
+                    <button onclick="classList.toggle('selected')"><i class="fa-solid fa-bed"></i></button><br><br>
+                    <button onclick="classList.toggle('selected')"><i class="fa-solid fa-bed"></i></button>
+                </div>
+                <div class="legendaM">
+                    <button><i class="fa-solid fa-bed"></i> Wolne</button>
+                    <button class="not"><i class="fa-solid fa-bed"></i> zajete</button>
+                    <button class="selected"><i class="fa-solid fa-bed"></i> wybrane</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{!-- KONIEC WYBORU KAJUT i REZERWACJI--}}
+
+
+
+
+
+
+
+
+
+{{!-- WEATHER --}}
+
+
+    <div class="containerWeatherApp">
+            
+        <div class="currentInfo">
+            
+            <div class="dateContainer">
+                <div class="time" id="time"><span id="amPM"></span></div>
+                <div class="date" id="date"></div>
+                <div class="others" id="currentWeatherItems"></div>
+                
+            </div>
+
+            <div class="placeContainer">
+                <div class="timeZone" id="timeZone"></div>
+                <div class="country" id="country"></div>
+                <div class="today" id="currentTemp"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{{!-- KONIEC WEATHER --}}
+
+
+
+
+
+
+
+
+<footer>
+    <div class="footer">
+        <a href="#"><i class="fa fa-arrow-up"></i></a><br><br>
+        <i class="fa fa-facebook-official"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-pinterest-p"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-linkedin"></i>
+        <p class="smallFont">&#169; MMatysek</p>
+    </div>
+</footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="./../js/func.js"></script>
+</body>
+</html>

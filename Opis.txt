@@ -1,0 +1,27 @@
+co sie udalo:
+wszystko :) z osoby ktora rok temu tylko kajarzyla html udalo mi sie cos takiego zrobic i jestem dumna
+
+Projekt wstepny i bardzo zmieniony przygotowano w Sigmie, plugin Stark mozna sprawdzać contrast ratio czy tekst dobrze czytelny na danym tle wlasciwie przydala sie glownie do sprawdzania kontralru
+logowanie oi ejestracja wykorzystano modale ze fajnie wyskakuja i tu jestem dumna, ze napisalam w miare plynne przechodzenie z jednego do drugiego
+podglad hasla i wymog wypelnienia
+nawigacja responsywna, zmienia sie w hamburgera
+hamburger min wykorzystano z fontawesonme
+zastosowano czcionke google rubik
+wykorzystano favicon
+panel wyboru kierunku rowniez responsywny 3 w linii lub jeden pod drugiom
+animacja - piraci gonia statek na gorze
+API - na stronie z rezerwacjami przy zaladowaniu strony pobierany jest aktualny kurs NOK i EUR z NBP
+Wykorzystano srodowisko NODE oraz biblioteke Express
+Przy pobieraniu danych do kalendarza wykorzystano biblioteke moment js. Pogoda pobiera z openweathermap 
+aktualne dane dla trzech lokalizacji ktor=rych wybor jest odgornie narzucony w zalezonysci od wybrane kierunku
+w navnarze zastosowano przycisk back
+udalo mi sie stworzyc wlasnego json i pobierac z niego ceny do formularza (o wiele trudniej niz pobranie z banku danych  :) )
+
+
+co sie nie udalo:
+projekt wykorzystalam jako okazje do ponownego przerobienia wszystkich zjazdow w zwiazku z czym czesc 
+nowo wprowadzanych rozwiazan ciezxko bylo dolozyc do projektu
+utrzymac porzadek - poczatkowo myslaam ze wszystko zmieszcze na stronie ale z kazdym elementem bylo tego corwiez wuecej
+teraz zrobilabym wiekszy podzial czy to funkji js czy jakies inne funkcjonalnosci
+css - bledem bylo stylizowanie kazdego elemetu z osobna zamiast pojsc w scss i inaczej przypisac
+ekonomia funckji :) udalo mi sie go skrocic ale wiem ze czasem moglam uzywac wiecej zmiennych a nie wiecej funcki

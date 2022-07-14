@@ -1,0 +1,548 @@
+html {
+    box-sizing: border-box;
+    font-family: "Rubik";
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+.justify{
+    text-align: justify;
+}
+/* ///// statek ///////// */
+.ship1{
+    color: #133f4d;
+    animation: moveIt 25s ease-in 0.1s infinite normal forwards;;
+}
+.ship2{
+    color: #241f47;
+    animation: moveIt 26s ease-in 0.1s infinite normal forwards;
+}
+@keyframes moveIt {
+    0% {transform: translateX(0vw)}
+    50% { transform: translateX(90vw)}
+    100% { transform: translateX(0vw)}
+}
+
+/* ////////////////////CZESC MODALI ////////////////////////// */
+
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.formButton {
+    background-color: #241f47;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.formButton:hover {
+    opacity: 0.8;
+}
+
+.containerForm {
+    padding: 16px;
+
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modalAnimation {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888;
+    width: 400px; /* Popracować nad responsywnoscia*/
+
+}
+
+/* Center the image and position the close button */
+.closeContainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+/* Add Zoom Animation */
+.modalAnimation{
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+
+
+/* ////////////////////CZESC NAVIGACJI////////////////////////// */
+.sticky{
+    position: sticky !important;
+    top: 0;
+    z-index: 1;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #133f4d;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #241f47;
+    color: white;}
+
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+
+/* ////////////////////CZESC WYBORU KIERUNKU////////////////////////// */
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+}
+
+.container {
+    padding: 0 16px;
+}
+
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: #241f47; /* dopracowac kolor */
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #241f47;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    margin:auto;
+}
+
+.button:hover {
+    background-color: rgba(69, 61, 116, 0.934);;
+}
+
+/* /// FOOOOOTER */
+.footer {
+    width: 100%;
+    background-color: #133f4d;
+    color: white;
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 5px;
+}
+.smallFont {
+    font-size: 13px;
+}
+
+a{
+    color: white;
+}
+
+/* WEATHER */
+
+
+
+.containerWeatherApp {
+    padding: 20px 70px;
+    color: white;
+    font-family: sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZGFyayUyMHdhdGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+}
+
+.currentInfo{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.dateContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.dateContainer .time {
+    font-size: 70px;
+}
+
+.dateContainer #amPM{
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.dateContainer .date{
+    font-size: 30px;
+}
+
+.placeContainer{
+    text-align: center;
+}
+.timeZone{
+    font-size: 30px;
+    font-weight: 100;
+}
+.country{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.others{
+    display: flex;
+    flex-direction: column;
+    background: rgba(24,24,27, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: 1px solid #eee;
+}
+
+.others .weatherItem{
+    display: flex;
+    justify-content: space-between;
+}
+
+.today{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.today .day{
+    padding: 5px 15px;
+    background-color: #3c3c44;
+    border-radius: 50px;
+    text-align: center;
+
+}
+
+.today .temp{
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .currentInfo{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    }
+    .containerWeatherApp {
+    width: 100vw;
+    }
+}
+
+
+/* wybor kajut KANARY*/
+.yachtBerthContainerK{
+    background-image: url("./img/katamaran.jpg");
+    background-repeat: no-repeat;
+    width: 670px;
+    height: 380px;
+    background-size: cover;
+    position: relative;
+}
+.yachtBerth1K{
+position: absolute;
+left: 155px; 
+top: 35px;
+}
+.yachtBerth2K{
+position: absolute;
+left: 155px; 
+top: 290px;
+}
+.yachtBerth3K{
+position: absolute;
+left: 480px; 
+top: 295px;
+}
+.yachtBerth4K{
+position: absolute;
+left: 480px; 
+top: 50px;
+}
+.yachtBerth5K{
+position: absolute;
+left: 585px; 
+top: 65px;
+}
+.legendaK{
+position: absolute;
+left: 20px; 
+top: -15px;
+}
+.yachtBerthContainerK button{
+color: rgb(36, 89, 164);
+}
+.selected{
+color: white !important;
+background-color: olivedrab;
+border: 1px solid olivedrab;
+}
+.not{
+color: white !important;
+background-color: firebrick;
+border: 1px solid firebrick;
+}
+
+/* wybor kajut MAZURY*/
+.yachtBerthContainerM{
+    background-image: url("./img/monohullM.jpg");
+    background-repeat: no-repeat;
+    width: 670px;
+    height: 380px;
+    background-size: cover;
+    position: relative;
+}
+.yachtBerth1M{
+position: absolute;
+left: 90px; 
+top: 100px;
+}
+.yachtBerth2M{
+position: absolute;
+left: 90px; 
+top: 200px;
+}
+
+.yachtBerth3M{
+    position: absolute;
+    left: 550px; 
+    top: 160px;
+    }
+
+.legendaM{
+position: absolute;
+left: 20px; 
+top: 25px;
+}
+.yachtBerthContainerM button{
+color: rgb(36, 89, 164);
+}
+
+/* wybor kajut LOFOTY*/
+
+.yachtBerthContainerL{
+    background-image: url("./img/monohullL.jpg");
+    background-repeat: no-repeat;
+    width: 670px;
+    height: 380px;
+    background-size: cover;
+    position: relative;
+}
+.yachtBerth1L{
+position: absolute;
+left: 125px; 
+top: 130px;
+}
+.yachtBerth2L{
+position: absolute;
+left: 125px; 
+top: 210px;
+}
+
+.yachtBerth3L{
+    position: absolute;
+    left: 480px; 
+    top: 140px;
+}
+
+.yachtBerth4L{
+    position: absolute;
+    left: 480px; 
+    top: 200px;
+}
+
+.yachtBerth5L{
+    position: absolute;
+    left: 530px; 
+    top: 180px;
+}
+
+.legendaL{
+position: absolute;
+left: 50px; 
+top: 60px;
+}
+.yachtBerthContainerL button{
+color: rgb(36, 89, 164);
+}
+
+
+/* rezerwacje */
+
+.column2 {
+    float: left;
+    width: 50%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+.container2 {
+    padding: 16px;
+    width: 670px;
+    height: 380px;
+}
+.title2 {
+    color: #241f47; 
+    margin-top: 5px;
+}
+.buttonRes {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #241f47;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    margin:auto;
+}
+.formalnosc{
+    width:30%; 
+    height: auto;
+    float: right;
+    border-radius: 10px;
+}
+
+.card2 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+}
+@media screen and (max-width: 750px) {
+    .column2 {
+        width: 100%;
+        display: block;
+    }
+    .buttonRes{
+        width: 60%;
+    }
+    .card2{
+        overflow-x: scroll;
+    }
+}
+
+/* stylowanie inputów */
+
+.resFormInput{
+    padding: 10px;
+    border: 2px solid rgba(69, 61, 116, 0.4);
+    border-radius:10px;
+    width: 180px;
+}
+
+.gratis{
+    margin-top: 10px;
+}
+
