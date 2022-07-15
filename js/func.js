@@ -1,8 +1,3 @@
-// import fetch from "node-fetch";    nie dziala
-// globalThis.fetch = fetch
-
-// import fetch from 'cross-fetch';     nie dziala
-
 function toggleRegisterPassword() {
     let x = document.getElementById("userRegisterPassword");
     if (x.type === "password") {
@@ -58,7 +53,6 @@ function getNOK() {
         })
 }
 
-
 function getEUR() {
     fetch("https://api.nbp.pl/api/exchangerates/rates/a/eur/?format=json")
         .then( resp => resp.json()) // bez tego dziwne rzeczy wyswietla ale wyswietla
@@ -66,9 +60,6 @@ function getEUR() {
             document.getElementById("insertEUR").innerText = data.rates[0].mid;
         })
 }
-
-
-
 
 // WEATHER ///////////////
 const timeE1 =document.getElementById('time');
@@ -194,7 +185,6 @@ function getPriceK(){
         document.getElementById("priceK").innerText = data.priceK;
     })
 }
-
 
 function getPriceL(){
     fetch('./data/ceny.json')
